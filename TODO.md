@@ -1,14 +1,10 @@
-# Prakriti Analysis Implementation TODO
+# TODO: Make Website More Reactive and Attractive, Add Ayurvedic Product Listing Menu
 
 ## Tasks
-- [x] Update Prisma schema to add PrakritiResult model
-- [x] Create API route at pages/api/prakriti.js for saving results
-- [x] Create PrakritiQuestionnaire component
-- [x] Create app/prakriti/page.js page
-- [x] Update Navbar component to add Prakriti Analysis link
-- [x] Update home page to add Prakriti Analysis FeatureCard
-- [ ] Test the implementation
-
-## Progress Tracking
-- Started: [Date/Time]
-- Completed: [Date/Time]
+- [x] Create AyurvedicProductMenu component for dropdown menu
+- [x] Update Navbar to include Products menu with dropdown
+- [x] Enhance Hero component with animations and interactivity
+- [x] Enhance FeatureCard component with hover effects and transitions
+- [x] Enhance DoctorCard component with animations if needed
+- [x] Update home page layout for better responsiveness
+- [x] Test responsiveness and styling across devices
