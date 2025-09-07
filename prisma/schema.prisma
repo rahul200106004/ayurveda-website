@@ -15,6 +15,7 @@ model User {
   role      Role     @default(PATIENT)
   createdAt DateTime @default(now())
   appointments Appointment[] // <-- relation field
+  prakritiResults PrakritiResult[] // <-- relation field
 }
 
 model Appointment {
@@ -39,6 +40,18 @@ model Payment {
   status     String
   appointmentId String?
   createdAt  DateTime @default(now())
+}
+
+model PrakritiResult {
+  id            String   @id @default(cuid())
+  userId        String
+  user          User     @relation(fields: [userId], references: [id])
+  vataScore     Int
+  pittaScore    Int
+  kaphaScore    Int
+  dominantDosha String
+  recommendations String?
+  createdAt     DateTime @default(now())
 }
 
 enum Role {

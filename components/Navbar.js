@@ -10,6 +10,7 @@ export default function Navbar(){
           <Link href='/'>Home</Link>
           <Link href='/doctor'>Doctor</Link>
           <Link href='/blog'>Blog</Link>
+          <Link href='/prakriti'>Prakriti Analysis</Link>
           <Link href='/book' className='px-4 py-2 bg-ayuGreen text-white rounded'>Book</Link>
           <LanguageSwitcher />
         </nav>
