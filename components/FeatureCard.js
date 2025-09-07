@@ -1,0 +1,1 @@
+export default function FeatureCard({title, children}){ return (<div className='bg-white p-5 rounded-xl shadow text-center'><h4 className='font-semibold text-ayuGreen'>{title}</h4><p className='mt-2 text-gray-600'>{children}</p></div>) }

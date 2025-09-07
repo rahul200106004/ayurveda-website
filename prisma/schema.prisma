@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  password  String
+  role      Role     @default(PATIENT)
+  createdAt DateTime @default(now())
+  appointments Appointment[] // <-- relation field
+}
+
+model Appointment {
+  id         String   @id @default(cuid())
+  datetime   DateTime
+  name       String
+  phone      String
+  status     String   @default("confirmed")
+  createdAt  DateTime @default(now())
+  userId     String?
+  user       User?    @relation(fields: [userId], references: [id]) // <-- add this line
+  paid       Boolean  @default(false)
+  paymentId  String?
+}
+
+model Payment {
+  id         String   @id @default(cuid())
+  provider   String
+  providerPaymentId String
+  amount     Int
+  currency   String
+  status     String
+  appointmentId String?
+  createdAt  DateTime @default(now())
+}
+
+enum Role {
+  PATIENT
+  DOCTOR
+  ADMIN
+}
