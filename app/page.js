@@ -1,9 +1,6 @@
 import Hero from '../components/Hero'
 import DoctorCard from '../components/DoctorCard'
 import FeatureCard from '../components/FeatureCard'
-import Hero from '../components/Hero'
-import DoctorCard from '../components/DoctorCard'
-import FeatureCard from '../components/FeatureCard'
 
 export default function Home() {
   return (
